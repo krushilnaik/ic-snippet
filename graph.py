@@ -1,5 +1,4 @@
 import json
-from pprint import pprint
 
 from langchain_core.messages import BaseMessage, HumanMessage, SystemMessage
 from langchain_openai import ChatOpenAI
@@ -89,7 +88,12 @@ def research_agent(state: State):
             queries.append(result["query"])
             content += [r["content"] for r in result["results"]]
 
-    return {"messages": messages, "queries": queries, "research": content}
+    updates = {"messages": messages, "queries": queries, "research": content}
+
+    if state["task"] == "research":
+        return Command(goto=END, update=updates)
+
+    return updates
 
 
 def outline_agent(state: State):
@@ -108,7 +112,12 @@ def outline_agent(state: State):
 
     outline = response.content
 
-    return {"outline": outline}
+    updates = {"outline": outline}
+
+    if state["task"] == "outline":
+        return Command(goto=END, update=updates)
+
+    return updates
 
 
 # checkpointer = MemorySaver()
