@@ -13,6 +13,4 @@ def test():
     # final["messages"] = ""
     del final["messages"]
 
-    print(final)
-
     return jsonify(final)

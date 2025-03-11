@@ -1,0 +1,71 @@
+[
+  {
+    "query": "Deloitte recent technological trends",
+    "follow_up_questions": null,
+    "answer": null,
+    "images": [],
+    "results": [
+      {
+        "title": "Deloitte's 16th Annual 'Tech Trends' Report Reveals AI Is Quickly ...",
+        "url": "https://www2.deloitte.com/us/en/pages/about-deloitte/articles/press-releases/deloitte-tech-trends-2025.html",
+        "content": "Deloitte\u2019s 16th Annual \u2018Tech Trends\u2019 Report Reveals AI Is Quickly Becoming Foundational to the Modern Enterprise \u2013 Press Release | Deloitte US When you join our Talent Network, you're connecting to career resources that provide insights into working at Deloitte and potential job opportunities. Deloitte\u2019s 16th Annual \u2018Tech Trends\u2019 Report Reveals AI Is Quickly Becoming Foundational to the Modern Enterprise has been saved Deloitte\u2019s 16th Annual \u2018Tech Trends\u2019 Report Reveals AI Is Quickly Becoming Foundational to the Modern Enterprise has been removed An Article Titled Deloitte\u2019s 16th Annual \u2018Tech Trends\u2019 Report Reveals AI Is Quickly Becoming Foundational to the Modern Enterprise already exists in Saved items Deloitte\u2019s 16th Annual \u2018Tech Trends\u2019 Report Reveals AI Is Quickly Becoming Foundational to the Modern Enterprise",
+        "score": 0.7318455,
+        "raw_content": null
+      },
+      {
+        "title": "2025 technology industry outlook | Deloitte Insights",
+        "url": "https://www2.deloitte.com/us/en/insights/industry/technology/technology-media-telecom-outlooks/technology-industry-outlook.html",
+        "content": "According to recent Deloitte surveys, business and IT leaders are getting pragmatic about deriving real business value, and workers are beginning to report productivity gains.9 At the same time, trust issues\u2014relating to data privacy and security, data quality, bias, and accuracy\u2014pose a barrier for both enterprise and consumer gen AI adoption.10 Tech leaders should be mindful of these potential challenges and consider ways to shore up trust and boost adoption. To help minimize these challenges, some tech providers are offering platform solutions, including hardware, software, GPUs, and AI services, that run within customers\u2019 own data centers\u2014providing the flexibility to scale up infrastructure (for example, for gen AI implementations), while giving enterprises greater control over their data.82 Others are building specialized, industry-focused gen AI agents for customers with the help of private cloud AI platforms.83",
+        "score": 0.6907474,
+        "raw_content": null
+      }
+    ],
+    "response_time": 1.84
+  },
+  {
+    "query": "EY innovation in the future of work",
+    "follow_up_questions": null,
+    "answer": null,
+    "images": [],
+    "results": [
+      {
+        "title": "The future of work | Today's business insights | EY - US",
+        "url": "https://www.ey.com/en_us/insights-on-the-future-of-work",
+        "content": "At the AI Summit New York 2024, EY led the conversation on AI innovation, business transformation, and responsible AI. Hear from EY leaders on AI's impact across industries and the future of enterprise technology.",
+        "score": 0.767429,
+        "raw_content": null
+      },
+      {
+        "title": "Going 'All In' on AI: Inside EY's $1.4 billion investment in the future ...",
+        "url": "https://www.unleash.ai/artificial-intelligence/going-all-in-on-ai-inside-eys-1-4-billion-investment-in-the-future-of-work/",
+        "content": "Accelerated technological change, geopolitical disruption and new priorities for attracting and retaining talent are all key points of attention for employers and HR leaders alike, and EY has gone 'All In' to make sure it is in the vanguard shaping the new world of work. EY affirmed its commitment to an AI-based strategy with the investment",
+        "score": 0.73981786,
+        "raw_content": null
+      }
+    ],
+    "response_time": 1.87
+  },
+  {
+    "query": "KPMG technology trends for business growth",
+    "follow_up_questions": null,
+    "answer": null,
+    "images": [],
+    "results": [
+      {
+        "title": "KPMG global tech report 2023",
+        "url": "https://kpmg.com/xx/en/our-insights/ai-and-technology/kpmg-global-tech-report-2023.html",
+        "content": "In our latest survey - the KPMG global tech report 2023 - digital leaders are bullish in their belief that embracing technology across all facets of their business is bringing productivity gains. Whether it's a focus on building trust in their services or investigating how AI can help serve them, our latest report shows that technologic",
+        "score": 0.783542,
+        "raw_content": null
+      },
+      {
+        "title": "KPMG global tech report 2024",
+        "url": "https://kpmg.com/xx/en/our-insights/transformation/kpmg-global-tech-report-2024.html",
+        "content": "This year, the KPMG global tech report 2024 \u2013 Beyond the hype: balancing speed, security and value, researched how tech execs are achieving this mix. The report harnesses insights from 2,450 tech professionals from 26 countries and 8 industries, from organizations valued at US $100 million and over. Make value-driven decisions with traceability and evidence, by incorporating insights from stakeholders, customers, employees and partners, while adopting an always-on approach to performance management, to help optimize value with confidence. Design, build, deploy and use AI and emerging tech solutions in a responsible and ethical manner so your organization can accelerate value with confidence. KPMG global tech report 2024 \u2013 Beyond the hype: balancing speed, security and value KPMG Elevate is our methodolgy to helps businesses identify and capture value using a data-driven approach.",
+        "score": 0.6208291,
+        "raw_content": null
+      }
+    ],
+    "response_time": 1.34
+  }
+]

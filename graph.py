@@ -1,3 +1,4 @@
+import json
 from pprint import pprint
 
 from langchain_core.messages import BaseMessage, HumanMessage, SystemMessage
@@ -62,20 +63,52 @@ def gather_requirements(state: State):
 
 
 def research_agent(state: State):
-    prompt = "You are a researcher at PwC tasked with providing information about similar companies' views on a user provided topic. Generate a list of search queries to gather relevant information. Only generate 3 queries max."
+    print("generating search queries")
+
+    prompt = (
+        "You are a researcher at PwC tasked with providing information about similar companies' views on a user provided topic. "
+        "Generate a list of search queries to gather relevant information. Only generate 3 queries max."
+    )
 
     messages = [
         SystemMessage(content=prompt),
         HumanMessage(content=f"Deloitte, EY, and KPMG's views on {state['topic']}"),
     ]
 
-    queries = model.with_structured_output(Queries).invoke(messages)
+    # queries = model.with_structured_output(Queries).invoke(messages)
 
-    print(f"Generated {len(queries)} quries")
+    print("researching ideas")
 
-    # pprint(queries)
+    content = []
+    queries = []
 
-    return {"messages": messages, **queries}
+    with open("example_search.json", "r") as file:
+        results = json.loads(file.read())
+
+        for result in results:
+            queries.append(result["query"])
+            content += [r["content"] for r in result["results"]]
+
+    return {"messages": messages, "queries": queries, "research": content}
+
+
+def outline_agent(state: State):
+    prompt = (
+        f"Write an outline for a {state['content_type']} about {state['topic'].lower()}. Use the following research as reference. "
+        "The research: \n\n"
+        "\n\n".join(state["research"])
+    )
+
+    messages = [
+        HumanMessage(content=prompt),
+    ]
+
+    print("writing outline")
+    response = model.invoke(messages)
+
+    outline = response.content
+
+    return {"outline": outline}
 
 
 # checkpointer = MemorySaver()
@@ -83,11 +116,12 @@ workflow = StateGraph(input=InputState, output=State, state_schema=State)
 
 workflow.add_node("gather_requirements", gather_requirements)
 workflow.add_node("research_agent", research_agent)
-
+workflow.add_node("outline_agent", outline_agent)
 
 workflow.add_edge(START, "gather_requirements")
 workflow.add_edge("gather_requirements", "research_agent")
-workflow.add_edge("research_agent", END)
+workflow.add_edge("research_agent", "outline_agent")
+workflow.add_edge("outline_agent", END)
 
 workflow.set_entry_point("gather_requirements")
 
