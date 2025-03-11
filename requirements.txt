@@ -1,0 +1,7 @@
+fastapi
+langgraph
+langchain-chroma
+langchain-openai
+langchain-community
+python-dotenv
+fastapi[standard]
